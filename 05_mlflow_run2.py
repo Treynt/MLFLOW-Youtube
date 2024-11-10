@@ -10,3 +10,5 @@ if __name__=="__main__":
         print(run.info.run_id)
 
         print(run.info)
+
+#Aqui seria outra forma de criar uma run, sem se preocupar com esquecer de encerrar, como no mlflow_run.py, e ainda consigo setar um nome desejado a run

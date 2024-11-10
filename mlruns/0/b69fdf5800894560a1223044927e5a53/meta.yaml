@@ -1,8 +1,9 @@
 artifact_uri: file:///home/silvio/Lasid/MLFLOW%20Youtube/mlruns/0/b69fdf5800894560a1223044927e5a53/artifacts
+deleted_time: 1731257001503
 end_time: 1731200154860
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: b69fdf5800894560a1223044927e5a53
 run_name: languid-pug-111
 run_uuid: b69fdf5800894560a1223044927e5a53
