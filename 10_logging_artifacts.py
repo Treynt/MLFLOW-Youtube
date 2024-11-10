@@ -1,8 +1,8 @@
-#Artifacts é o termo que descreve o output do treinamento (um modelo totalmente treinado, a model checkpoint ou um arquivo)
 import mlflow
 from mlflow_utils import get_mlflow_experiment
 
 if __name__=="__main__":
+
     experiment = get_mlflow_experiment(experiment_name="testing_mlflow1")
 
     print("Name: {}".format(experiment.name))
@@ -11,12 +11,7 @@ if __name__=="__main__":
 
         # your machine learning code goes here
 
-        # create a text file that says hello world
-        with open("hello_world.txt", "w") as f:
-            f.write("Hello World!")
-
-        # log the text file as an artifact
-        mlflow.log_artifact(local_path="hello_world.txt", artifact_path="text_files")
+        mlflow.log_artifacts(local_dir="./run_artifacts",artifact_path="run_artifacts") #Por este metodo, não pega o caminho do arquivo, mas de um diretório, podendo ver mais de um tipo de arquivo
 
         # print run info
         print("run_id: {}".format(run.info.run_id))
@@ -24,5 +19,4 @@ if __name__=="__main__":
         print("status: {}".format(run.info.status))
         print("start_time: {}".format(run.info.start_time))
         print("end_time: {}".format(run.info.end_time))
-        print("lifecycle_stage: {}".format(run.info.lifecycle_stage))
-        
+        print("lifecycle_stage: {}".format(run.info.lifecycle_stage))   
