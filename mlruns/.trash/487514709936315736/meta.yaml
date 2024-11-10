@@ -1,0 +1,9 @@
+artifact_location: /home/silvio/Lasid/MLFLOW Youtube/testing_mlflow1_artifacts
+creation_time: 1731189924390
+experiment_id: '487514709936315736'
+last_update_time: 1731198594153
+lifecycle_stage: deleted
+name: testing_mlflow1
+tags:
+  env: dev
+  version: 1.0.0
