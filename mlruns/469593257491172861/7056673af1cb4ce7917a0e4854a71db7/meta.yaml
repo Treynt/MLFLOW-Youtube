@@ -1,0 +1,15 @@
+artifact_uri: /home/silvio/Lasid/MLFLOW Youtube/nested_run_artifacts/7056673af1cb4ce7917a0e4854a71db7/artifacts
+end_time: 1731347797287
+entry_point_name: ''
+experiment_id: '469593257491172861'
+lifecycle_stage: active
+run_id: 7056673af1cb4ce7917a0e4854a71db7
+run_name: parent
+run_uuid: 7056673af1cb4ce7917a0e4854a71db7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731347797187
+status: 3
+tags: []
+user_id: silvio

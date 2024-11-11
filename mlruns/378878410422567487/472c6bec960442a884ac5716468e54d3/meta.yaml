@@ -1,0 +1,15 @@
+artifact_uri: /home/silvio/Lasid/MLFLOW Youtube/testing_mlflow1_artifacts/472c6bec960442a884ac5716468e54d3/artifacts
+end_time: 1731334245061
+entry_point_name: ''
+experiment_id: '378878410422567487'
+lifecycle_stage: active
+run_id: 472c6bec960442a884ac5716468e54d3
+run_name: logging_models
+run_uuid: 472c6bec960442a884ac5716468e54d3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731334241090
+status: 3
+tags: []
+user_id: silvio

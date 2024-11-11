@@ -1,9 +1,13 @@
 import mlflow
+from mlflow.models import infer_signature
 from mlflow_utils import get_mlflow_experiment
+
 
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
+
+import pandas as pd 
 
 if __name__=="__main__":
 
@@ -16,23 +20,24 @@ if __name__=="__main__":
         X, y = make_classification(n_samples=1000, n_features=10, n_informative=5, n_redundant=5, random_state=42)
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=43)
 
-        # log model using autolog
-        mlflow.autolog() # cria automaticamente os logging de parameters, metrics e artifacts
-        # mlflow.sklearn.autolog() Mesma coisa do mlflow.autolog, mas especificando o framework
+        X_train = pd.DataFrame(X_train, columns=["feature_{}".format(i) for i in range(10)])
+        X_test = pd.DataFrame(X_test, columns=["feature_{}".format(i) for i in range(10)])
+        y_train = pd.DataFrame(y_train, columns=["target"])
+        y_test = pd.DataFrame(y_test, columns=["target"])
 
         rfc = RandomForestClassifier(n_estimators=100, random_state=42)
         rfc.fit(X_train, y_train)
         y_pred = rfc.predict(X_test)
+        y_pred = pd.DataFrame(y_pred, columns=["prediction"])
 
-        
+        # infer signature
+        model_signature = infer_signature(model_input=X_train, model_output=y_pred)
+
+
         # log model 
-        #mlflow.sklearn.log_model(sk_model=rfc, artifact_path="random_forest_classifier")
-        """ A utlilização do log.model é quando deseja realizar o log de forma mais controlada (da mais controle ao dev),
-        passando apenas os parametros desejados. Ele é associado ao framework que está utilizando. 
-        No nosso caso é o sklearn, mas poderia ser o xgbost ou tensorflow (mlflow.tensorflow.log.model()...)"""
+        mlflow.sklearn.log_model(sk_model=rfc, artifact_path="random_forest_classifier", signature=model_signature)
         
         
-
         # print info about the run
         print("run_id: {}".format(run.info.run_id))
         print("experiment_id: {}".format(run.info.experiment_id))
