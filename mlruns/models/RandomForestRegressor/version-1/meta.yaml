@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1732581411974
+current_stage: None
+description: null
+last_updated_timestamp: 1732581411974
+name: RandomForestRegressor
+run_id: c4576722a75d4b6ba2dab1e49e2d1fcd
+run_link: null
+source: /home/silvio/Lasid/MLFLOW Youtube/model_registry_artifacts/c4576722a75d4b6ba2dab1e49e2d1fcd/artifacts/rfr_model
+status: READY
+status_message: null
+storage_location: /home/silvio/Lasid/MLFLOW Youtube/model_registry_artifacts/c4576722a75d4b6ba2dab1e49e2d1fcd/artifacts/rfr_model
+user_id: null
+version: 1

@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1732581410888
+current_stage: None
+description: null
+last_updated_timestamp: 1732581410888
+name: CustomModel
+run_id: c4576722a75d4b6ba2dab1e49e2d1fcd
+run_link: null
+source: /home/silvio/Lasid/MLFLOW Youtube/model_registry_artifacts/c4576722a75d4b6ba2dab1e49e2d1fcd/artifacts/custom_model
+status: READY
+status_message: null
+storage_location: /home/silvio/Lasid/MLFLOW Youtube/model_registry_artifacts/c4576722a75d4b6ba2dab1e49e2d1fcd/artifacts/custom_model
+user_id: null
+version: 1

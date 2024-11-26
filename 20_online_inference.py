@@ -1,6 +1,6 @@
 import json
 import requests
-
+#Local server que podemos realizar o deploy dos modelos
 data = {
     "dataframe_split": {"columns": ["input"], "data": [15]},
     "params": {"model_name": "model_1"},
